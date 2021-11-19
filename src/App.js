@@ -1,7 +1,6 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 import React, { useEffect, useState } from "react";
-
 
 import Amplify from "@aws-amplify/core";
 import { DataStore } from "@aws-amplify/datastore";
@@ -13,24 +12,24 @@ Amplify.configure(awsConfig);
 function onCreate() {
   DataStore.save(
     new Todo({
-      description: `Test todo ${Math.random().toString(36).substring(2, 5)}`
+      description: `Test todo ${Math.random().toString(36).substring(2, 5)}`,
     })
   );
 }
 
 function App() {
-  const [todos, setTodos] = useState ([]);
+  const [todos, setTodos] = useState([]);
 
   async function getTodos() {
-    const alltodos = await DataStore.query(Todo)
-    setTodos(alltodos)
+    const alltodos = await DataStore.query(Todo);
+    setTodos(alltodos);
   }
 
-  useEffect(() => { 
-    getTodos()
-    const subscription = DataStore.observe(Todo).subscribe(() => getTodos())
-    return () => subscription.unsubscribe()
-  })
+  useEffect(() => {
+    getTodos();
+    const subscription = DataStore.observe(Todo).subscribe(() => getTodos());
+    return () => subscription.unsubscribe();
+  });
 
   return (
     <div className="App">
