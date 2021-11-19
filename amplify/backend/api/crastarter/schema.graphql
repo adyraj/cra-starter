@@ -1,4 +1,6 @@
 type Todo @model @auth(rules: [{allow: public}]) {
   id: ID!
   description: String
+  prod_test: String
 }
+ 
