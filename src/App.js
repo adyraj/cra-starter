@@ -35,34 +35,19 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <div>
-          <input
-            type="button"
-            value="NEW - SKIP BACKEND"
-            onClick={() => {
-              onCreate();
-              getTodos(setTodos);
-            }}
-          />
-        </div>
-        <table border="1">
-          <thead>
-            <tr>
-              <td>Id</td>
-              <td>Desc</td>
-            </tr>
-          </thead>
-          <tbody>
-            {todos.map((item, i) => {
-              return (
-                <tr key={i}>
-                  <td>{todos[i].id.substring(0, 8)}...</td>
-                  <td>{todos[i].description}</td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+      <div>
+        <input type="button" value="NEW - SKIP BACKEND" onClick={() => { onCreate(); getTodos(setTodos)} } />
+      </div>
+      <table border="1">
+        <thead>
+          <tr><td>Id</td><td>Desc</td></tr>
+        </thead>
+        <tbody>
+          {todos.map( (item,i) => {
+            return <tr key={i}><td>{todos[i].id.substring(0,8)}...</td><td>{todos[i].description}</td></tr>
+          } )}
+        </tbody>
+      </table>
       </header>
     </div>
   );
