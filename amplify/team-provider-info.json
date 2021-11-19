@@ -10,6 +10,23 @@
       "StackName": "amplify-amplify2d8088bd49b84-staging-112247",
       "StackId": "arn:aws:cloudformation:ap-south-1:442803386520:stack/amplify-amplify2d8088bd49b84-staging-112247/063f8410-492b-11ec-8d43-0288ae66ad4a",
       "AmplifyAppId": "dhwnjhc3d1e4l"
+    },
+    "categories": {
+      "auth": {
+        "crastarter": {
+          "userPoolId": "ap-south-1_luwusLYd0",
+          "userPoolName": "my_chat_app_user_pool",
+          "webClientId": "29ttats831kafd080bhj3u3m4a",
+          "nativeClientId": "29ttats831kafd080bhj3u3m4a",
+          "identityPoolId": "ap-south-1:a6515225-f104-42fc-80d1-1f1f95759640",
+          "identityPoolName": "my_chat_app_identity_pool",
+          "allowUnauthenticatedIdentities": false,
+          "authRoleArn": "arn:aws:iam::442803386520:role/Cognito_my_chat_app_identity_poolAuth_Role",
+          "authRoleName": "Cognito_my_chat_app_identity_poolAuth_Role",
+          "unauthRoleArn": "arn:aws:iam::442803386520:role/Cognito_my_chat_app_identity_poolUnauth_Role",
+          "unauthRoleName": "Cognito_my_chat_app_identity_poolUnauth_Role"
+        }
+      }
     }
   }
 }
